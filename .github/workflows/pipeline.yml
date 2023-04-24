@@ -23,5 +23,5 @@ jobs:
         distribution: 'temurin'
     - name: Compilando Java
       run: |
-       cd src
+       cd polimorfismo/src
        javac -cp  . Main.java
