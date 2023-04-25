@@ -1,11 +1,11 @@
 # This workflow will build a Java project with Ant
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-ant
 
-name: Java CI
+name: Java do MODOLO
 
 on:
   push:
-    branches: [ "testeFidas" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -21,7 +21,12 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Compilando Java
+    - name: Compilando no JAVA
       run: |
-       cd src
-       javac -cp . Main.java
+          cd src
+          javac -cp . Main.java
+    - name: Rodando o Programa
+      run: |
+          cd src
+          java -cp . Main 
+        
